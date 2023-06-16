@@ -5,48 +5,71 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <style>
+            input:focus {
+                outline: 0;
+            }
+        </style>
     </head>
     <body>
-        <h1 id="show"></h1>
+        <svg id="svg" height="400" width="400">
+            <circle
+                id="circle"
+                r="190"
+                cx="200"
+                cy="200"
+                fill="transparent"
+                stroke-width="10"
+                transform="rotate(-90 200 200)"
+            />
+        </svg>
         <input
+            placeholder="00.00"
             type="text"
             name=""
             id="duration"
             style="
+                position: absolute;
+                left: 100px;
+                top: 80px;
+                border: 0;
                 height: 150px;
                 font-size: 70px;
-                width: 150px;
+                width: 180px;
                 padding: 20px;
                 margin-bottom: 30px;
             "
         />
         <br />
-        <button
-            id="start"
-            style="
-                font-size: 20px;
-                background-color: white;
-                border: 5px solid black;
-                border-radius: 4px;
-                margin: 10px;
-                padding: 10px;
-            "
-        >
-            start
-        </button>
-        <button
-            id="pause"
-            style="
-                font-size: 20px;
-                background-color: white;
-                border: 5px solid black;
-                border-radius: 4px;
-                margin: 10px;
-                padding: 10px;
-            "
-        >
-            pause
-        </button>
+        <div style="position: absolute; left: 110px; top: 220px">
+            <button
+                id="start"
+                style="
+                    font-size: 20px;
+                    background-color: white;
+                    border: 5px solid black;
+                    border-radius: 4px;
+                    margin: 10px;
+                    padding: 10px;
+                "
+            >
+                start
+            </button>
+            <button
+                id="pause"
+                style="
+                    font-size: 20px;
+                    background-color: white;
+                    border: 5px solid black;
+                    border-radius: 4px;
+                    margin: 10px;
+                    padding: 10px;
+                "
+            >
+                pause
+            </button>
+        </div>
+        <script src="timer.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
